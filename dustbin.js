@@ -5,8 +5,8 @@ class dustbin{
         this.image=loadImage("dustbingreen.png");
 
         this.bottomBody=Bodies.rectangle(this.x,this.y,200,20,{isStatic:true});
-        this.leftBody=Bodies.rectangle(this.x-100,this.y-107,20,213,{isStatic:true});
-        this.rightBody=Bodies.rectangle(this.x+100,this.y-107,20,213,{isStatic:true});
+        this.leftBody=Bodies.rectangle(this.x-100,this.y-107.5,20,213,{isStatic:true});
+        this.rightBody=Bodies.rectangle(this.x+100,this.y-107.5,20,213,{isStatic:true});
 
         World.add(world,this.bottomBody); 
         World.add(world,this.leftBody);
@@ -31,7 +31,7 @@ class dustbin{
         translate(this.bottomBody.position.x,this.bottomBody.position.y+10);
         imageMode(CENTER);
         angleMode(RADIANS);
-        image(this.image,0,-107,200,107);
+        image(this.image,0,-107.5,200,213);
         pop();
     }
 }
